@@ -1,0 +1,20 @@
+
+# Makefile for MicroCruft Visual C++
+
+TOP=..
+
+DIRNAME=rxp
+
+todo: default_target
+
+OBJS = charset.obj dtd.obj string16.obj url.obj ctype16.obj input.obj stdio16.obj system.obj xmlparser.obj XML_Parser.obj
+
+LOCAL_INCLUDES = /I..\include\rxp
+
+CFLAGS = $(DEBUGFLAGS) $(OPTFLAGS) $(INCLUDEFLAGS) /DCHAR_SIZE=8
+
+INLIB = ..\$(LIB_DIR)\libestbase.lib
+
+ALL = .vcbuildlib
+!include $(TOP)\config\vc_common_make_rules
+

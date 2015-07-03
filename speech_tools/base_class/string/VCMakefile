@@ -1,0 +1,20 @@
+
+# Makefile for MicroCruft Visual C++
+
+TOP=..\..
+
+DIRNAME=base_class\string
+
+todo: default_target
+
+OBJS = EST_String.obj EST_Regex.obj EST_Chunk.obj regexp.obj regerror.obj regsub.obj EST_strcasecmp.obj
+
+LOCAL_INCLUDES = /I.
+
+CFLAGS = $(DEBUGFLAGS) $(OPTFLAGS) $(INCLUDEFLAGS) 
+
+INLIB = ..\..\$(LIB_DIR)\libeststring.lib
+
+ALL = .vcbuildlibs
+!include $(TOP)\config\vc_common_make_rules
+

@@ -1,0 +1,20 @@
+
+# Makefile for MicroCruft Visual C++
+
+TOP=..
+
+DIRNAME=stats
+
+todo: default_target
+
+OBJS = EST_cluster.obj EST_multistats.obj confusion.obj EST_Discrete.obj EST_DProbDist.obj EST_ols.obj EST_viterbi.obj dynamic_program.obj
+
+DIRS = wagon kalman_filter
+
+CFLAGS = $(DEBUGFLAGS) $(OPTFLAGS) $(INCLUDEFLAGS) 
+
+INLIB = ..\$(LIB_DIR)\libestbase.lib
+
+ALL = .vcbuildlib .sub_directories
+!include $(TOP)\config\vc_common_make_rules
+

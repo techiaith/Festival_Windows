@@ -1,0 +1,18 @@
+
+# Makefile for MicroCruft Visual C++
+
+TOP=..
+
+DIRNAME=ling_class
+
+todo: default_target
+
+OBJS = EST_Item.obj EST_Item_Content.obj item_aux.obj EST_relation_aux.obj EST_relation_track.obj relation_io.obj EST_relation_compare.obj standard_feature_functions.obj EST_Relation_mls.obj EST_item_aux.obj EST_item_content_aux.obj EST_Relation.obj EST_UtteranceFile.obj genxml.obj EST_utterance_aux.obj ling_class_init.obj ling_t.obj EST_Utterance.obj item_feats.obj apml.obj solexml.obj EST_FeatureFunctionPackage.obj EST_FeatureFunctionContext.obj
+
+CFLAGS = $(DEBUGFLAGS) $(OPTFLAGS) $(INCLUDEFLAGS) /DESTLIBDIRC=/cygdrive/c/festival/speech_tools/lib /DINCLUDE_XML_FORMATS=1
+
+INLIB = ..\$(LIB_DIR)\libestbase.lib
+
+ALL = .vcbuildlib
+!include $(TOP)\config\vc_common_make_rules
+

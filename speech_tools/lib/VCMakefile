@@ -1,0 +1,23 @@
+
+# Makefile for MicroCruft Visual C++
+
+TOP=..
+
+DIRNAME=lib
+
+todo: default_target
+
+OBJS =
+
+CFLAGS = $(DEBUGFLAGS) $(OPTFLAGS) $(INCLUDEFLAGS) 
+
+INLIB = ..\$(LIB_DIR)\libestools.lib
+
+ALL = est_program_makefile est_mainline .libraries
+!include $(TOP)\config\vc_common_make_rules
+
+est_program_makefile:
+	@echo no template makefile built for VC++
+
+est_mainline:
+	@echo no template main built for VC++

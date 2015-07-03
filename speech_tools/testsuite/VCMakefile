@@ -1,0 +1,106 @@
+
+# Makefile for MicroCruft Visual C++
+
+TOP=..
+
+DIRNAME=testsuite
+
+todo: default_target
+
+OBJS = xml_example.obj string_example.obj hash_example.obj pathname_example.obj track_example.obj token_example.obj complex_example.obj list_example.obj kvl_example.obj handle_example.obj named_enum_example.obj deq_example.obj ling_example.obj feature_example.obj xml_regression.obj string_regression.obj hash_regression.obj pathname_regression.obj track_regression.obj token_regression.obj complex_regression.obj list_regression.obj kvl_regression.obj handle_regression.obj named_enum_regression.obj deq_regression.obj ling_regression.obj feature_regression.obj
+
+CFLAGS = $(DEBUGFLAGS) $(OPTFLAGS) $(INCLUDEFLAGS) /DDATAC=/cygdrive/c/festival/speech_tools/lib
+
+INLIB = ..\$(LIB_DIR)\libestools.lib
+
+PROGS = xml_example.exe string_example.exe hash_example.exe pathname_example.exe track_example.exe token_example.exe complex_example.exe list_example.exe kvl_example.exe handle_example.exe named_enum_example.exe deq_example.exe ling_example.exe feature_example.exe xml_regression.exe string_regression.exe hash_regression.exe pathname_regression.exe track_regression.exe token_regression.exe complex_regression.exe list_regression.exe kvl_regression.exe handle_regression.exe named_enum_regression.exe deq_regression.exe ling_regression.exe feature_regression.exe
+
+ALL = $(PROGS)
+!include $(TOP)\config\vc_common_make_rules
+
+
+xml_example.exe : xml_example.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:xml_example.exe xml_example.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+string_example.exe : string_example.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:string_example.exe string_example.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+hash_example.exe : hash_example.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:hash_example.exe hash_example.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+pathname_example.exe : pathname_example.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:pathname_example.exe pathname_example.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+track_example.exe : track_example.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:track_example.exe track_example.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+token_example.exe : token_example.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:token_example.exe token_example.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+complex_example.exe : complex_example.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:complex_example.exe complex_example.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+list_example.exe : list_example.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:list_example.exe list_example.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+kvl_example.exe : kvl_example.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:kvl_example.exe kvl_example.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+handle_example.exe : handle_example.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:handle_example.exe handle_example.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+named_enum_example.exe : named_enum_example.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:named_enum_example.exe named_enum_example.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+deq_example.exe : deq_example.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:deq_example.exe deq_example.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+ling_example.exe : ling_example.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:ling_example.exe ling_example.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+feature_example.exe : feature_example.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:feature_example.exe feature_example.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+xml_regression.exe : xml_regression.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:xml_regression.exe xml_regression.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+string_regression.exe : string_regression.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:string_regression.exe string_regression.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+hash_regression.exe : hash_regression.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:hash_regression.exe hash_regression.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+pathname_regression.exe : pathname_regression.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:pathname_regression.exe pathname_regression.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+track_regression.exe : track_regression.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:track_regression.exe track_regression.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+token_regression.exe : token_regression.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:token_regression.exe token_regression.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+complex_regression.exe : complex_regression.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:complex_regression.exe complex_regression.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+list_regression.exe : list_regression.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:list_regression.exe list_regression.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+kvl_regression.exe : kvl_regression.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:kvl_regression.exe kvl_regression.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+handle_regression.exe : handle_regression.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:handle_regression.exe handle_regression.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+named_enum_regression.exe : named_enum_regression.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:named_enum_regression.exe named_enum_regression.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+deq_regression.exe : deq_regression.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:deq_regression.exe deq_regression.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+ling_regression.exe : ling_regression.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:ling_regression.exe ling_regression.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+feature_regression.exe : feature_regression.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:feature_regression.exe feature_regression.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+

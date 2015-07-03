@@ -1,0 +1,18 @@
+
+# Makefile for MicroCruft Visual C++
+
+TOP=..
+
+DIRNAME=siod
+
+todo: default_target
+
+OBJS = slib.obj slib_core.obj slib_doc.obj slib_file.obj slib_format.obj slib_list.obj slib_math.obj slib_sys.obj slib_server.obj slib_str.obj slib_xtr.obj slib_repl.obj slib_python.obj io.obj trace.obj siod.obj siod_est.obj siodeditline.obj el_complete.obj editline.obj el_sys_win32.obj
+
+CFLAGS = $(DEBUGFLAGS) $(OPTFLAGS) $(INCLUDEFLAGS) 
+
+INLIB = ..\$(LIB_DIR)\libestools.lib
+
+ALL = .vcbuildlib
+!include $(TOP)\config\vc_common_make_rules
+

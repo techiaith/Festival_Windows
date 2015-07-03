@@ -1,0 +1,18 @@
+
+# Makefile for MicroCruft Visual C++
+
+TOP=..\..
+
+DIRNAME=include\win32
+
+todo: default_target
+
+OBJS =
+
+CFLAGS = $(DEBUGFLAGS) $(OPTFLAGS) $(INCLUDEFLAGS) 
+
+INLIB = ..\..\$(LIB_DIR)\libestools.lib
+
+ALL =
+!include $(TOP)\config\vc_common_make_rules
+

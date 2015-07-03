@@ -1,0 +1,18 @@
+
+# Makefile for MicroCruft Visual C++
+
+TOP=..\..
+
+DIRNAME=sigpr\pda
+
+todo: default_target
+
+OBJS = pcb_smoother.obj smooth_pda.obj pda.obj srpd1.3.obj
+
+CFLAGS = $(DEBUGFLAGS) $(OPTFLAGS) $(INCLUDEFLAGS) 
+
+INLIB = ..\..\$(LIB_DIR)\libestbase.lib
+
+ALL = .vcbuildlib
+!include $(TOP)\config\vc_common_make_rules
+

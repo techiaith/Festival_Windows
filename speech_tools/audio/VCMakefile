@@ -1,0 +1,18 @@
+
+# Makefile for MicroCruft Visual C++
+
+TOP=..
+
+DIRNAME=audio
+
+todo: default_target
+
+OBJS = gen_audio.obj nas.obj esd.obj sun16audio.obj mplayer.obj win32audio.obj irixaudio.obj os2audio.obj macosxaudio.obj linux_sound.obj
+
+CFLAGS = $(DEBUGFLAGS) $(OPTFLAGS) $(INCLUDEFLAGS)
+
+INLIB = ..\$(LIB_DIR)\libestbase.lib
+
+ALL = .vcbuildlib
+!include $(TOP)\config\vc_common_make_rules
+

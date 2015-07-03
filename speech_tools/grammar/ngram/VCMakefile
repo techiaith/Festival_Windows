@@ -1,0 +1,18 @@
+
+# Makefile for MicroCruft Visual C++
+
+TOP=..\..
+
+DIRNAME=grammar\ngram
+
+todo: default_target
+
+OBJS = lattice_t.obj EST_Ngrammar.obj ngrammar_io.obj ngrammar_aux.obj ngrammar_utils.obj EST_lattice.obj EST_lattice_io.obj freqsmooth.obj EST_PST.obj
+
+CFLAGS = $(DEBUGFLAGS) $(OPTFLAGS) $(INCLUDEFLAGS) 
+
+INLIB = ..\..\$(LIB_DIR)\libestools.lib
+
+ALL = .vcbuildlib
+!include $(TOP)\config\vc_common_make_rules
+

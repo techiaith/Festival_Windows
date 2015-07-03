@@ -1,0 +1,18 @@
+
+# Makefile for MicroCruft Visual C++
+
+TOP=..
+
+DIRNAME=utils
+
+todo: default_target
+
+OBJS = cmd_line.obj util_io.obj filetrans.obj cmd_line_aux.obj EST_swapping.obj est_file.obj EST_cutils.obj EST_error.obj walloc.obj system_specific_win32.obj
+
+CFLAGS = $(DEBUGFLAGS) $(OPTFLAGS) $(INCLUDEFLAGS) 
+
+INLIB = ..\$(LIB_DIR)\libestbase.lib
+
+ALL = .vcbuildlibs
+!include $(TOP)\config\vc_common_make_rules
+

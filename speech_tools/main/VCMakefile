@@ -1,0 +1,121 @@
+
+# Makefile for MicroCruft Visual C++
+
+TOP=..
+
+DIRNAME=main
+
+todo: default_target
+
+OBJS = ch_lab_main.obj ch_track_main.obj ch_wave_main.obj na_play_main.obj na_record_main.obj sigfilter_main.obj sig2fv_main.obj spectgen_main.obj pda_main.obj pitchmark_main.obj ngram_test_main.obj ngram_build_main.obj tilt_synthesis_main.obj tilt_analysis_main.obj viterbi_main.obj dp_main.obj bcat_main.obj ch_utt_main.obj design_filter_main.obj align_main.obj siod_main.obj wagon_main.obj wagon_test_main.obj scfg_make_main.obj scfg_train_main.obj scfg_test_main.obj scfg_parse_main.obj wfst_build_main.obj wfst_run_main.obj wfst_train_main.obj ols_main.obj ols_test_main.obj xml_parser_main.obj wagon_main.obj wagon_test_main.obj ols_main.obj ols_test_main.obj scfg_make_main.obj scfg_train_main.obj scfg_test_main.obj scfg_parse_main.obj wfst_build_main.obj wfst_run_main.obj wfst_train_main.obj siod_main.obj xml_parser_main.obj
+
+CFLAGS = $(DEBUGFLAGS) $(OPTFLAGS) $(INCLUDEFLAGS) 
+
+INLIB = ..\$(LIB_DIR)\libestools.lib
+
+PROGS = ch_lab.exe ch_track.exe ch_wave.exe na_play.exe na_record.exe sigfilter.exe sig2fv.exe spectgen.exe pda.exe pitchmark.exe ngram_test.exe ngram_build.exe tilt_synthesis.exe tilt_analysis.exe viterbi.exe dp.exe bcat.exe ch_utt.exe design_filter.exe align.exe siod.exe wagon.exe wagon_test.exe scfg_make.exe scfg_train.exe scfg_test.exe scfg_parse.exe wfst_build.exe wfst_run.exe wfst_train.exe ols.exe ols_test.exe xml_parser.exe
+
+ALL = $(PROGS)
+!include $(TOP)\config\vc_common_make_rules
+
+
+ch_lab.exe : ch_lab_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:ch_lab.exe ch_lab_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+ch_track.exe : ch_track_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:ch_track.exe ch_track_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+ch_wave.exe : ch_wave_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:ch_wave.exe ch_wave_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+na_play.exe : na_play_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:na_play.exe na_play_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+na_record.exe : na_record_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:na_record.exe na_record_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+sigfilter.exe : sigfilter_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:sigfilter.exe sigfilter_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+sig2fv.exe : sig2fv_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:sig2fv.exe sig2fv_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+spectgen.exe : spectgen_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:spectgen.exe spectgen_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+pda.exe : pda_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:pda.exe pda_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+pitchmark.exe : pitchmark_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:pitchmark.exe pitchmark_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+ngram_test.exe : ngram_test_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:ngram_test.exe ngram_test_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+ngram_build.exe : ngram_build_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:ngram_build.exe ngram_build_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+tilt_synthesis.exe : tilt_synthesis_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:tilt_synthesis.exe tilt_synthesis_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+tilt_analysis.exe : tilt_analysis_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:tilt_analysis.exe tilt_analysis_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+viterbi.exe : viterbi_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:viterbi.exe viterbi_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+dp.exe : dp_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:dp.exe dp_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+bcat.exe : bcat_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:bcat.exe bcat_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+ch_utt.exe : ch_utt_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:ch_utt.exe ch_utt_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+design_filter.exe : design_filter_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:design_filter.exe design_filter_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+align.exe : align_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:align.exe align_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+siod.exe : siod_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:siod.exe siod_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+wagon.exe : wagon_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:wagon.exe wagon_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+wagon_test.exe : wagon_test_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:wagon_test.exe wagon_test_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+scfg_make.exe : scfg_make_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:scfg_make.exe scfg_make_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+scfg_train.exe : scfg_train_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:scfg_train.exe scfg_train_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+scfg_test.exe : scfg_test_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:scfg_test.exe scfg_test_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+scfg_parse.exe : scfg_parse_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:scfg_parse.exe scfg_parse_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+wfst_build.exe : wfst_build_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:wfst_build.exe wfst_build_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+wfst_run.exe : wfst_run_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:wfst_run.exe wfst_run_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+wfst_train.exe : wfst_train_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:wfst_train.exe wfst_train_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+ols.exe : ols_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:ols.exe ols_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+ols_test.exe : ols_test_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:ols_test.exe ols_test_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+xml_parser.exe : xml_parser_main.obj  $(AUX_OBJS) $(VCLIBS)
+	link/nologo $(LINKFLAGS) /out:xml_parser.exe xml_parser_main.obj $(AUX_OBJS) $(VCLIBS) $(WINLIBS)
+
+

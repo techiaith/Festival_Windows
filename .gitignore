@@ -1,0 +1,16 @@
+*.pdb
+*.obj
+*.ilk
+*.ipch
+*.sdf
+*.exe
+*.pch
+*.suo
+visualstudio/FestivalTTSCOM/Release/*
+visualstudio/FestivalTTSCOM/Debug/*
+visualstudio/FestivalConsoleDotNet/bin/Release/*
+visualstudio/FestivalConsoleDotNet/bin/Debug/*
+visualstudio/FestivalConsoleDotNet/obj/*
+visualstudio/FestivalTTSDotNet/bin/Release/*
+visualstudio/FestivalTTSDotNet/bin/Debug/*
+visualstudio/FestivalTTSDotNet/obj/*

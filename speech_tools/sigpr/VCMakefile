@@ -1,0 +1,20 @@
+
+# Makefile for MicroCruft Visual C++
+
+TOP=..
+
+DIRNAME=sigpr
+
+todo: default_target
+
+OBJS = EST_Window.obj delta.obj filter.obj sigpr_frame.obj sigpr_utt.obj pitchmark.obj spectrogram.obj misc.obj fft.obj
+
+DIRS = pda
+
+CFLAGS = $(DEBUGFLAGS) $(OPTFLAGS) $(INCLUDEFLAGS) 
+
+INLIB = ..\$(LIB_DIR)\libestbase.lib
+
+ALL = .vcbuildlib pda
+!include $(TOP)\config\vc_common_make_rules
+

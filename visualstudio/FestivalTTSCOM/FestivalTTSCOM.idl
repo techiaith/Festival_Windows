@@ -1,0 +1,37 @@
+// FestivalTTSCOM.idl : IDL source for FestivalTTSCOM
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (FestivalTTSCOM.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(0014FB73-CDD9-4BD2-83D1-0747A012DB58),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IFestivalTTSEngine : IDispatch{
+	[id(1)] HRESULT say_text([in] BSTR inText);
+	[id(2)] HRESULT eval_command([in] BSTR inCommand);
+	[id(3)] HRESULT text_to_wave([in] BSTR inText, [in] BSTR inFile);
+};
+[
+	uuid(AA30C75C-4D16-4B39-A49A-3B8B044D1A6A),
+	version(1.0),
+]
+library FestivalTTSCOMLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(DE59C381-1FB0-40F3-9688-DBEABE7A9466)		
+	]
+	coclass FestivalTTSEngine
+	{
+		[default] interface IFestivalTTSEngine;
+	};
+};
+

@@ -1,0 +1,26 @@
+HKCR
+{
+	FestivalTTSCOM.FestivalTTSEngine.1 = s 'FestivalTTSEngine Class'
+	{
+		CLSID = s '{DE59C381-1FB0-40F3-9688-DBEABE7A9466}'
+	}
+	FestivalTTSCOM.FestivalTTSEngine = s 'FestivalTTSEngine Class'
+	{		
+		CurVer = s 'FestivalTTSCOM.FestivalTTSEngine.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {DE59C381-1FB0-40F3-9688-DBEABE7A9466} = s 'FestivalTTSEngine Class'
+		{
+			ProgID = s 'FestivalTTSCOM.FestivalTTSEngine.1'
+			VersionIndependentProgID = s 'FestivalTTSCOM.FestivalTTSEngine'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{AA30C75C-4D16-4B39-A49A-3B8B044D1A6A}'
+			Version = s '1.0'
+		}
+	}
+}

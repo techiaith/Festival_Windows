@@ -1,0 +1,18 @@
+
+# Makefile for MicroCruft Visual C++
+
+TOP=..
+
+DIRNAME=speech_class
+
+todo: default_target
+
+OBJS = EST_Wave.obj EST_track_aux.obj EST_wave_temp.obj EST_wave_cuts.obj ssff.obj esps_io.obj esps_utils.obj EST_wave_io.obj EST_wave_utils.obj EST_TrackMap.obj EST_Track.obj wave_t.obj track_t.obj EST_wave_aux.obj EST_TrackFile.obj EST_WaveFile.obj
+
+CFLAGS = $(DEBUGFLAGS) $(OPTFLAGS) $(INCLUDEFLAGS) 
+
+INLIB = ..\$(LIB_DIR)\libestbase.lib
+
+ALL = .vcbuildlib
+!include $(TOP)\config\vc_common_make_rules
+

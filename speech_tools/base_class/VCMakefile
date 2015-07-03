@@ -1,0 +1,20 @@
+
+# Makefile for MicroCruft Visual C++
+
+TOP=..
+
+DIRNAME=base_class
+
+todo: default_target
+
+OBJS = EST_UList.obj EST_Option.obj EST_StringTrie.obj EST_Token.obj vec_mat_aux.obj EST_Pathname_win32.obj THash_aux.obj EST_FMatrix.obj EST_Complex.obj EST_Val.obj EST_matrix_support.obj rateconv.obj EST_IMatrix.obj EST_SMatrix.obj EST_DMatrix.obj vec_mat_aux_d.obj EST_FeatureData.obj EST_slist_aux.obj EST_svec_aux.obj EST_ilist_aux.obj EST_features_aux.obj EST_features_io.obj vec_mat_aux_i.obj EST_Featured.obj EST_Features.obj
+
+DIRS = string inst_tmpl
+
+CFLAGS = $(DEBUGFLAGS) $(OPTFLAGS) $(INCLUDEFLAGS) 
+
+INLIB = ..\$(LIB_DIR)\libestbase.lib
+
+ALL = .vcbuildlib string inst_tmpl
+!include $(TOP)\config\vc_common_make_rules
+

@@ -1,0 +1,20 @@
+
+# Makefile for MicroCruft Visual C++
+
+TOP=.
+
+DIRNAME=.
+
+todo: default_target
+
+OBJS =
+
+DIRS = siod rxp audio utils base_class ling_class speech_class sigpr stats grammar intonation lib main scripts testsuite bin
+
+CFLAGS = $(DEBUGFLAGS) $(OPTFLAGS) $(INCLUDEFLAGS) 
+
+INLIB = .\$(LIB_DIR)\libestools.lib
+
+ALL = .config_error .sub_directories
+!include $(TOP)\config\vc_common_make_rules
+
